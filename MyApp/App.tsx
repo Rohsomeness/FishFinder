@@ -6,6 +6,7 @@
  * https://github.com/react-native-community/react-native-template-typescript
  *
  * @format
+ * 4230
  */
 
  import React from 'react';
@@ -17,12 +18,18 @@
    Text,
    useColorScheme,
    View,
+   Button,
+   Alert,
  } from 'react-native';
+
+//  import Button from "./components/CustomButton"
+
+import MainScreen from './components/MainScreen';
 
  import {
    Colors,
    DebugInstructions,
-   Header,
+  //  Header,
    LearnMoreLinks,
    ReloadInstructions,
  } from 'react-native/Libraries/NewAppScreen';
@@ -68,26 +75,8 @@
        <ScrollView
          contentInsetAdjustmentBehavior="automatic"
          style={backgroundStyle}>
-         <Header />
-         <View
-           style={{
-             backgroundColor: isDarkMode ? Colors.black : Colors.white,
-           }}>
-           <Section title="Step One">
-             Edit <Text style={styles.highlight}>App.js</Text> to change this
-             screen and then come back to see your edits.
-           </Section>
-           <Section title="See Your Changes">
-             <ReloadInstructions />
-           </Section>
-           <Section title="Debug">
-             <DebugInstructions />
-           </Section>
-           <Section title="Learn More">
-             Read the docs to discover what to do next:
-           </Section>
-           <LearnMoreLinks />
-         </View>
+         {/* <Header /> */}
+         <MainScreen />
        </ScrollView>
      </SafeAreaView>
    );
